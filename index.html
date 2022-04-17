@@ -29,6 +29,11 @@
 
      gtag('config', 'G-MDBNZRZ45H');
     </script>
+	<div class="progress">
+	 <div class="progress-container">
+		<div class="progress-bar" id="myBar"></div>
+	 </div>
+	</div>
 	<title>Great Fashion Designer</title>
  </head>
 
@@ -42,8 +47,6 @@
 		<!-- Nav is a sematic tag page that aids accessibility -->
 		<div class="navbar">
 		   <!--Skip to Main Content-->
-	      
-			 
 			 <div class="navigation">
 			 <nav>
 			   <ul id="menulist">
@@ -192,5 +195,19 @@
 		}
 
     </script>	
+
+	<script>
+		// When the user scrolls the page, execute myFunction
+       window.onscroll = function() {myFunction()};
+
+     function myFunction() {
+      var winScroll = document.body.scrollTop || 
+	  document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - 
+	  document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+     document.getElementById("myBar").style.width = scrolled + "%";
+    }
+	</script>
  </body>
 </html>

@@ -31,11 +31,16 @@
 
      gtag('config', 'G-MDBNZRZ45H');
     </script>
+	<div class="progress">
+		<div class="progress-container">
+		   <div class="progress-bar" id="myBar"></div>
+		</div>
+	</div>
 	<title>Contact with me</title>
 </head>
 
 <body>
-	
+	<a class="skip" href="#skip">Skip to Main Content</a>
 	<!-- Header is a sematic tag page that aids readability -->
 	<header>
 		
@@ -43,7 +48,6 @@
 		
 		<div class="navbar">
 			 <!--Skip to Main Content-->
-	         <div class="skip"><a href="#main">Skip to Main Content</a></div>
 			 <div class="navigation">
 			 <nav >
 			   <ul id="menulist">
@@ -64,7 +68,7 @@
 	</header>
 		<!-- The h1 is a semantic tag that aids accessibility -->
 	<main class="container">
-		<h1 id="main">My design</h1>
+		<h1 id="skip">My design</h1>
 	    <h2>"reframe of minimalism"</h2>
 		<div class="detailed">
 		 <p>
@@ -140,7 +144,19 @@
 		}
 
  </script>
+ <script>
+	// When the user scrolls the page, execute myFunction
+   window.onscroll = function() {myFunction()};
 
+ function myFunction() {
+  var winScroll = document.body.scrollTop || 
+  document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - 
+  document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+ }
+ </script>
 	
 </body>
 </html>
