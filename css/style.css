@@ -13,7 +13,8 @@ body{
 }
 a.skip{
 	background: white;
-	padding: 6px;
+	padding: 30px 10px;
+	margin-top: 10px;
 	-webkit-transition: top 1s ease-out;
 	transition: left 1s ease-out;
 	z-index: 1;
@@ -542,13 +543,13 @@ a:visited{color:#575552}
 
 
 
-@media only screen and (min-width:760px){
+@media only screen and (min-width:768px){
 	nav {
 		flex: 1;
 		text-align: center;
 	}
 	.banner{
-		min-height:40vh;}
+		min-height:50vh;}
 
 	.banner h4{
 		font-family: 'Shadows Into Light', cursive;
@@ -654,7 +655,7 @@ a:visited{color:#575552}
 }
 
 
-@media only screen and (min-width:990px){
+@media only screen and (min-width:992px){
 	h2{
 		font-size: 1.8rem;
 	}
@@ -691,7 +692,7 @@ a:visited{color:#575552}
 	  }
 
 	.banner{
-		min-height:70vh;}
+		min-height:90vh;}
 
 	.banner h4{
 		font-family: 'Shadows Into Light', cursive;
@@ -774,8 +775,14 @@ a:visited{color:#575552}
 
 
 @media all and (prefers-reduced-motion:reduce){
-	animations {
+	.animations {
 		animation: none;
+	}
+    
+	.banner,
+	h1,
+	h2{
+		animation:none;
 	}
 
     html {
@@ -807,6 +814,13 @@ a:visited{color:#575552}
 	html 
 	   {
 			scroll-behavior: auto;
+		}
+
+		.img_card:hover .card_content, .img_card:focus-within .card_content, 
+		.img_card:active .card_content, .img_card:focus .card_content{
+			-webkit-transform: none;
+			transform: none;
+			transition: transform none;
 		}
 }
  
